@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "629119861125",
+    "project_id": "readcycle-1a0bc",
+    "storage_bucket": "readcycle-1a0bc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629119861125:android:cf32e5ca7781d90cc104ec",
+        "android_client_info": {
+          "package_name": "com.example.readcycle"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDODHLGFopFZW3nToHMQtjfWWC4as4tjmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
