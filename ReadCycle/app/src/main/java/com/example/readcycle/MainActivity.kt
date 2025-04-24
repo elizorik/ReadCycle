@@ -1,6 +1,8 @@
 package com.example.readcycle
 
+import android.app.Application
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +13,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.readcycle.login.LoginScreen
 import com.example.readcycle.ui.theme.ReadCycleTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,14 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ReadCycleTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
+            LoginScreen()
         }
     }
 }
@@ -45,3 +41,13 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+//class App : Application() {
+//
+//    init {
+//        APP = this
+//    }
+//
+//    companion object {
+//        lateinit var APP: App
+//    }
+//}
