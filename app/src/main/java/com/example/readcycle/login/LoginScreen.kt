@@ -18,12 +18,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.readcycle.Greeting
+import com.example.readcycle.MainActivity
 import com.example.readcycle.navigation.Timer
 //import com.example.readcycle.App
 import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlin.coroutines.coroutineContext
 
 @Composable
 fun LoginScreen() {
@@ -70,7 +72,7 @@ private fun signUp(auth:FirebaseAuth, email:String, password:String){
             Log.d("Login", "Sign Up succeed")
         }
         else{
-            //Toast.makeText(App.APP, "Вы уже зарегистрированы в приложении!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(MainActivity.APP, "Вы уже зарегистрированы в приложении!", Toast.LENGTH_SHORT).show()
             Log.d("Login","Sign Up failed")
         }
     }

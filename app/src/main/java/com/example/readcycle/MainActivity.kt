@@ -1,6 +1,7 @@
 package com.example.readcycle
 
 import android.app.Application
+import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -47,6 +48,13 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : ComponentActivity() {
+
+    init {
+                APP = this
+    }
+    companion object {
+        lateinit var APP: Context
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -105,13 +113,3 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
-//class App : Application() {
-//
-//    init {
-//        APP = this
-//    }
-//
-//    companion object {
-//        lateinit var APP: App
-//    }
-//}
